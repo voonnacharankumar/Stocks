@@ -1,9 +1,9 @@
 .head{
-      
+      color: rgba(4, 184, 230, 0.856);
     font-size: 2.3rem;
 }
 body {
-    background: rgb(255, 190, 217);
+   
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     padding: 0 16px;
   }
