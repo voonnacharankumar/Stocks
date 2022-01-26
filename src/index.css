@@ -3,7 +3,7 @@
     font-size: 2.3rem;
 }
 body {
-   
+    background: rgb(248, 241, 244);
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     padding: 0 16px;
   }
