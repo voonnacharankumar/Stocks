@@ -25,13 +25,20 @@ function help(key){
         var data3=r.data.chart.result[0].indicators.quote[0].low;
         var data4=r.data.chart.result[0].indicators.quote[0].high;
         var title=r.data.chart.result[0].meta.symbol;
-        Mychart(data1,data2,data3,data4,title);
+        var time=r.data.chart.result[0].timestamp;
+        Mychart(data1,data2,data3,data4,title,time);
     });
 }
 
-function Mychart(data1,data2,data3,data4,title,){
-    var xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];
-
+function Mychart(data1,data2,data3,data4,title,time){
+    let today = new Date();
+   var xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];let j=0;
+   for(let i=18;i>=0;i--){
+    let priorDate = new Date(new Date().setDate(today.getDate() - j)).toISOString();
+       xValues[i]=priorDate.substring(0,10);
+       j++;
+   }
+    
     new Chart("myChart", {
     type: "line",
     data: {
@@ -43,7 +50,7 @@ function Mychart(data1,data2,data3,data4,title,){
         backgroundColor: "rgba(0,0,255,1.0)",
         borderColor: "red",
         data: data4
-        }, {
+        }, {    
          label:'open',
         fill: false,
         lineTension: 0.2,
@@ -75,6 +82,7 @@ function Mychart(data1,data2,data3,data4,title,){
         title: {
             fontSize:30,
             display: true,
+            fontColor: "green",
             text: title
         }
     }
