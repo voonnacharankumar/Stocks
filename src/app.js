@@ -29,13 +29,13 @@ function help(key){
         Mychart(data1,data2,data3,data4,title,time);
     });
 }
-
 function Mychart(data1,data2,data3,data4,title,time){
     let today = new Date();
    var xValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19];let j=0;
    for(let i=18;i>=0;i--){
     let priorDate = new Date(new Date().setDate(today.getDate() - j)).toISOString();
        xValues[i]=priorDate.substring(0,10);
+       xValues[i]=xValues[i][8]+xValues[i][9]+"-"+xValues[i][5]+xValues[i][6]+"-"+xValues[i].substring(0,4);
        j++;
    }
     
