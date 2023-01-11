@@ -19,22 +19,6 @@ https://user-images.githubusercontent.com/89398145/209933196-b0813922-fe61-4b2a-
 🔥 User Can see details of any company using their stocks key
 
 
-## Installation 📦
-
->npm install 
-
-#### Clone
-
-- Clone this repo to your local machine.
-
-#### Run server locally
-
-> Go to localhost:3000
-
-----
-
-## Contributing 💡
-
 
 #### Step 1
 
